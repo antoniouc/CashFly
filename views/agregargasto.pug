@@ -1,0 +1,42 @@
+extends layout
+
+block content
+    section.main
+
+        h1 Agregar Nuevo Gasto o Ingreso
+        form(action="/agregar" method="post")
+            .form-group
+                label(for="descripcion") Descripción
+                input(type="text" id="descripcion" name="descripcion" required)
+            .form-group
+                label(for="total") Total
+                input(type="number" id="total" name="total" required)
+            .form-group
+                label(for="fecha") Fecha
+                input(type="date" id="fecha" name="fecha" required)
+            .form-group
+                label(for="categoria") Categoría
+                select(id="categoria" name="categoria" required)
+                    option(value="") Seleccione una categoría
+                    option(value="alimentos") Alimentos
+                    option(value="transporte") Transporte
+                    option(value="entretenimiento") Entretenimiento
+                    option(value="salud") Salud
+                    option(value="educacion") Educación
+                    option(value="otro") Otro
+            .form-group
+                label(for="metodo_pago") Método de Pago
+                select(id="metodo_pago" name="metodo_pago" required)
+                    option(value="") Seleccione un método de pago
+                    option(value="efectivo") Efectivo
+                    option(value="tarjeta_credito") Tarjeta de Crédito
+                    option(value="tarjeta_debito") Tarjeta de Débito
+                    option(value="transferencia") Transferencia Bancaria
+                    option(value="otro") Otro
+            .form-group
+                label(for="nota") Nota
+                textarea(id="nota" name="nota" rows="4")
+            .form-group
+                label(for="etiquetas") Etiquetas
+                input(type="text" id="etiquetas" name="etiquetas" placeholder="Separadas por comas")
+            button(type="submit") Agregar

@@ -1,0 +1,22 @@
+{
+  "name": "cashfly",
+  "version": "1.0.0",
+  "description": "Esta aplicación web está diseñada para ayudarte a gestionar y monitorear tus gastos personales de manera eficiente. Con una interfaz amigable y funcionalidades intuitivas, la app permite registrar, categorizar y analizar tus gastos, facilitando un mejor control de tus finanzas personales.",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass styles/sass/styles.sass:public/css/styles.css",
+    "start": "npm run  sass && nodemon app.js"
+  },
+  "keywords": [],
+  "author": "Antonio uc",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2",
+    "path": "^0.12.7",
+    "pug": "^3.0.3",
+    "sass": "^1.77.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.1"
+  }
+}

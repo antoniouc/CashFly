@@ -1,0 +1,52 @@
+extends layout
+
+block content
+  section.main
+    .attendance
+      .attendance-list
+        h1 MOVIMIENTOS
+        .headers
+          a(href=`/agregarTransaccion`, class='link-a gastos')
+            i(class='material-symbols-rounded') payments
+            |Agregar Gasto
+          a(href=`/agregarproducto`, class='link-a ingresos')
+            i(class='material-symbols-rounded') payments
+            |Agregar ingreso
+        .row
+          .col.col-4
+            .circular.ingresos
+              i(class='material-symbols-rounded') monitoring
+            p Balance
+            p $500
+          .col.col-4
+            .circular.ingresos
+              i(class='material-symbols-rounded') payments
+            p Ingresos totales
+            p $1000
+          .col.col-4
+            .circular.gastos
+              i(class='material-symbols-rounded') payments
+            p Gastos totales
+            p $500
+        table.table
+          thead
+            tr
+              th Descripcion
+              th total 
+              th fecha 
+              th categoria 
+              th metodo pago 
+              th nota 
+              th etiquetas
+              th 
+          tbody
+            tr
+              td compras para el bebe 
+              td 1000
+              td 2020-12-12
+              td ropa 
+              td efectivo
+              td se compro dos juegos de salir 
+              td bebé ropa 
+              td
+                a(href=``, class='link-a') editar
