@@ -2,7 +2,6 @@ extends layout
 
 block content
     section.main
-
         h1 Agregar Nuevo Gasto o Ingreso
         form(action="/agregar" method="post")
             .form-group
@@ -18,21 +17,17 @@ block content
                 label(for="categoria") Categoría
                 select(id="categoria" name="categoria" required)
                     option(value="") Seleccione una categoría
-                    option(value="alimentos") Alimentos
-                    option(value="transporte") Transporte
-                    option(value="entretenimiento") Entretenimiento
-                    option(value="salud") Salud
-                    option(value="educacion") Educación
-                    option(value="otro") Otro
+                    if categoria.length > 0
+                        each cate in categoria
+                            option(value="${cate.CategoriaID}") #{cate.Nombre}
             .form-group
                 label(for="metodo_pago") Método de Pago
                 select(id="metodo_pago" name="metodo_pago" required)
                     option(value="") Seleccione un método de pago
-                    option(value="efectivo") Efectivo
-                    option(value="tarjeta_credito") Tarjeta de Crédito
-                    option(value="tarjeta_debito") Tarjeta de Débito
-                    option(value="transferencia") Transferencia Bancaria
-                    option(value="otro") Otro
+                    if metodo.length > 0
+                        each meto in metodo
+                            option(value="${meto.MetodoPagoID}") #{meto.Nombre}
+
             .form-group
                 label(for="nota") Nota
                 textarea(id="nota" name="nota" rows="4")

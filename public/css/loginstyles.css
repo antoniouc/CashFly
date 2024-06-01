@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+.material-symbols-rounded {
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+.noto-sans-Noto style {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  font-family: "Noto Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #F0F3FF;
+}
+
+i {
+  vertical-align: middle;
+}
+
+.badge {
+  position: relative;
+  top: -15px;
+  background-color: #87A8A4;
+  color: white;
+  border-radius: 50%;
+  padding: 5px 8px;
+  font-size: 12px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 5% 20% 0 20%;
+}
+
+h1 {
+  text-align: center;
+  color: #5bdb63;
+}
+
+.centered-index-content {
+  max-width: 800px;
+  margin: 5% 10% 0 10%;
+  text-align: justify;
+}
+
+.login-container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+}
+
+.title {
+  font-size: 24px;
+  text-align: center;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group {
+  display: flex;
+  justify-content: start;
+  width: 100%;
+  flex-direction: column;
+}
+.form-group button {
+  color: white;
+  background-color: #2fa1bd;
+  border-radius: 20px;
+  align-self: center;
+}
+.form-group button:hover {
+  background-color: #347924;
+}
+
+#mostrarContrasena {
+  width: 80px;
+  align-self: flex-end;
+}
+
+.form-label {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.form-input {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 1px solid #2fa1bd;
+  align-self: center;
+}
+.form-input input:hover, .form-input input:focus, .form-input input:active, .form-input input:focus-visible {
+  border: 1px solid #347924;
+  outline-width: 1px;
+  outline-style: solid;
+  outline-color: #347924;
+}
+
+.show-password-label {
+  font-size: 12px;
+}
+
+.submit-button {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #2fa1bd;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  margin: 20px;
+  width: 100%;
+}
+.submit-button:hover {
+  background-color: #347924;
+}
+
+.register-link {
+  margin-top: 10px;
+  text-align: center;
+}
+
+/*# sourceMappingURL=loginstyles.css.map */
