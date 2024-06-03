@@ -30,7 +30,7 @@ async function obtenerCategorias() {
     try {
       const response = await axios.get(`${process.env.BASE_URL}/opcion/obtener-metodopagos`);
       const pagos = response.data;
-      return pagos.map(pago => new Metodopago(pago.MetodoPagoI,
+      return pagos.map(pago => new Metodopago(pago.MetodoPagoID,
         pago.Nombre));
     } catch (error) {
       console.error('Error al obtener todos los productos:', error);

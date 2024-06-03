@@ -12,7 +12,7 @@ router.post('/', async (req, res) => {
     if (password !== confirmPassword) {
         return res.status(400).send('Las contraseñas no coinciden');
     }
-
+ 
     try {
         // Hash de la contraseña
         const password_hash = await authMiddleWare.getHash(password);

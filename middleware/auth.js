@@ -19,7 +19,7 @@ async function authenticate(req, res, next) {
         const decoded = jwt.verify(token, privateKey);
 
         // Almacena el ID del usuario en la solicitud para su posterior uso
-        req.userId = decoded.userId;
+        req.user = { id: decoded.data.UsuarioID };
 
         next();
 

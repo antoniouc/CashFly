@@ -15,7 +15,7 @@ router.post('/', passport.authenticate('local', {
   failureFlash: true
 }), async (req, res) => {
   // Si se autentica correctamente, crea un token JWT
-  const token = authMiddleware.generateToken(req.user.id, '1h');
+  const token = authMiddleware.generateToken({ UsuarioID: req.user.UsuarioID }, '1h');
 
   res.cookie('token', token, { httpOnly: true, secure: false });
 

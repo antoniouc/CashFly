@@ -2,8 +2,12 @@ extends layout
 
 block content
     section.main
-        h1 Agregar Nuevo Gasto o Ingreso
-        form(action="/agregar" method="post")
+        if Tipo === 'Gasto'
+            h1 Agregar Nuevo Gasto
+        else 
+            if Tipo === 'Ingreso'
+                h1 Agregar Nuevo Ingreso
+        form(action="/agregar-movimiento" method="post")
             .form-group
                 label(for="descripcion") Descripción
                 input(type="text" id="descripcion" name="descripcion" required)
@@ -19,14 +23,14 @@ block content
                     option(value="") Seleccione una categoría
                     if categoria.length > 0
                         each cate in categoria
-                            option(value="${cate.CategoriaID}") #{cate.Nombre}
+                            option(value=`${cate.CategoriaID}`) #{cate.Nombre}
             .form-group
                 label(for="metodo_pago") Método de Pago
-                select(id="metodo_pago" name="metodo_pago" required)
+                select(id="metodo" name="metodo" required)
                     option(value="") Seleccione un método de pago
                     if metodo.length > 0
                         each meto in metodo
-                            option(value="${meto.MetodoPagoID}") #{meto.Nombre}
+                            option(value=`${meto.MetodoPagoID}`) #{meto.Nombre}
 
             .form-group
                 label(for="nota") Nota
@@ -34,4 +38,5 @@ block content
             .form-group
                 label(for="etiquetas") Etiquetas
                 input(type="text" id="etiquetas" name="etiquetas" placeholder="Separadas por comas")
+            input(type="hidden" name="tipo" value=`${Tipo}`)
             button(type="submit") Agregar

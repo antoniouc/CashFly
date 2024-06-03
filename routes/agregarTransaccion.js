@@ -5,10 +5,11 @@ const opcioncontroller = require('../controllers/opcioncontroller');
 
 
 // Rutas públicas
-router.get('/', async (req, res) => {
+router.get('/:Tipo', async (req, res) => {
   const categoria = await opcioncontroller.obtenerCategorias();
   const metodo = await opcioncontroller.obtenerMetodosPagos();
-  res.render('agregargasto', { categoria, metodo });
+  const Tipo = req.params.Tipo;
+  res.render('agregargasto', { categoria, metodo ,Tipo});
 });
 
 module.exports = router;
