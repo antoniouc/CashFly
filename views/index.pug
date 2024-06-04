@@ -28,25 +28,26 @@ block content
               i(class='material-symbols-rounded') payments
             p Gastos totales
             p $500
-        table.table
-          thead
-            tr
-              th Descripcion
-              th total 
-              th fecha 
-              th categoria 
-              th metodo pago 
-              th nota 
-              th etiquetas
-              th 
-          tbody
-            tr
-              td compras para el bebe 
-              td 1000
-              td 2020-12-12
-              td ropa 
-              td efectivo
-              td se compro dos juegos de salir 
-              td bebé ropa 
-              td
-                a(href=``, class='link-a') editar
+      if data.length > 0
+          table.table
+            thead
+              tr
+                th Descripcion
+                th total 
+                th fecha 
+                th categoria 
+                th metodo pago 
+                th nota 
+                th etiquetas
+                th 
+            tbody
+              each item in data 
+                    tr
+                      td #{item.Descripcion}
+                      td #{item.Total}
+                      td #{item.Fecha}
+                      td #{item.CategoriaID}
+                      td #{item.MetodoPagoID}
+                      td #{item.Nota}
+                      td #{item.Etiquetas}
+                        a(href=``, class='link-a') editar
